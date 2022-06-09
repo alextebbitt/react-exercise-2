@@ -1,18 +1,23 @@
 import React from 'react'
 import './Home.css';
 
-export const Home = () => {
+export const Home = ({photo}) => {
+  console.log(photo)
   return (
-      
-<div> <p> Hello, my name is Alex Tebbitt. </p></div>
-  //    <div><img
-  //              id="logo"
-  //             src="https://valinguahouse.com/wp-content/uploads/2020/08/cropped-Original-1-300x187.png"
-  //             alt="logo"
-  //             height="100px"
-  //            /></div>
-  // )
-)}
+      <div>
+<div> <h1> Hello, my name is Alex Tebbitt. </h1></div>
+     
+     <div class ='image'>
+       <img
+               id="logo"
+              src={photo}
+              alt="logo"
+              height="300px"
+             /></div>
+             </div>
+  )
+}
+
 
 
 

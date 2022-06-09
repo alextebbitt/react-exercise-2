@@ -2,7 +2,7 @@ import React from 'react'
 import './Footer.css';
 export const Footer = () => {
   return (
-        //   <footer>
+        
         // <img
         //   src="https://valinguahouse.com/wp-content/uploads/2020/08/cropped-Original-1-300x187.png"
         //   alt="logo"
@@ -17,9 +17,11 @@ export const Footer = () => {
         //   <li><a href="*">Email: alex.tebbitt87@gmail.com</a></li>
         // </ul>
         // </div>
-    //   </footer>
-    <div>
-      Hola
+    
+    <div class = 'info'>
+      <h4>I am curretly learning how to code. In the last few weeks, I have been learning about:
+       Javascript, Express,Node.js, MongoDB, Mongoose, mySql and Sequelize. This has been made 
+       using React. </h4>
     </div>
   )
 }

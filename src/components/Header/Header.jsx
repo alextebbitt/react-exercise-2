@@ -1,9 +1,12 @@
 import React from 'react'
 import './Header.css';
+import 'bootstrap/dist/css/bootstrap.css';
+
 export const Header = () => {
   return (
+    <div>
     <nav className="navbar navbar-expand-lg navbar-light bg-light">
-  <a className="navbar-brand" href="#">Navbar</a>
+  <a className="navbar-brand" href="#">A nav bar</a>
   <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span className="navbar-toggler-icon"></span>
   </button>
@@ -11,10 +14,10 @@ export const Header = () => {
   <div className="collapse navbar-collapse" id="navbarSupportedContent">
     <ul className="navbar-nav mr-auto">
       <li className="nav-item active">
-        <a className="nav-link" href="#">Home <span className="sr-only">(current)</span></a>
+        <a className="nav-link" href="#">Home <span className="sr-only"></span></a>
       </li>
       <li className="nav-item">
-        <a className="nav-link" href="#">Link</a>
+        <a className="nav-link" href="#">About</a>
       </li>
       <li className="nav-item dropdown">
         <a className="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -28,25 +31,25 @@ export const Header = () => {
         </div>
       </li>
       <li className="nav-item">
-        <a className="nav-link disabled" href="#">Disabled</a>
+        
       </li>
     </ul>
     <form className="form-inline my-2 my-lg-0">
-      <input className="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search"/>
+      
       <button className="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
     </form>
   </div>
 </nav>
-      // <nav className = 'navbar navbar-expand-lg navbar-light bg-light'>
+      {/* // <nav className = 'navbar navbar-expand-lg navbar-light bg-light'>
       //     <span>
-      //       <img
-      //         id="logo"
+      //       <img */}
+      {/* //         id="logo"
       //         src="https://valinguahouse.com/wp-content/uploads/2020/08/cropped-Original-1-300x187.png"
       //         alt="logo"
       //         height="100px"
       //       />
-      //     </span>
-      //     <span>
+      //     </span> */}
+      {/* //     <span>
       //       <ul className="navbar navbar-expand-lg navbar-light bg-light">
       //         <li><a href="./Homepage.html">Home</a></li>
       //         <li><a href="./about.html">About</a></li>
@@ -54,7 +57,8 @@ export const Header = () => {
       //         <li><a href="./portfolio.html">Portfolio</a></li>
       //       </ul>
       //     </span>
-      //   </nav>
+      //   </nav> */}
+      </div>
   )
 }
 
