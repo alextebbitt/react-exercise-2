@@ -3,9 +3,14 @@ p {
 }
 div {
 align-items: center;
-margin-left: 20px;
-margin-right: 20px;
 }
 .image {
     margin-top: 50px;
+}
+.main-container {
+display: flex;
+justify-content: space-around;
+}
+.h11 {
+width: 50%;
 }

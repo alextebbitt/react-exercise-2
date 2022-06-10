@@ -5,7 +5,12 @@ import { Header } from './components/Header/Header';
 import Photo from './assets/foto.JPG'
 
 function App() {
-  
+  const persons =
+    [{
+      name: 'Alex',
+      surname: 'Tebbitt,',
+      age: 31
+    }]
   return (
     <div className="App">
       <Header/>
