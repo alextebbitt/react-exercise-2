@@ -1,6 +1,7 @@
 import React from "react";
 import "./Home.css";
 
+
 export const Home = ({ photo, objeto }) => {
   
   console.log(photo);

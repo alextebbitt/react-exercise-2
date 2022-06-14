@@ -1,18 +1,19 @@
-import React from 'react'
-import './Header.css';
-import 'bootstrap/dist/css/bootstrap.css';
+import React from "react";
+import "./Header.css";
+import "bootstrap/dist/css/bootstrap.css";
+import { Link } from "react-router-dom";
 
 export const Header = () => {
   return (
     <div class="topnav">
-      <a class="active" href="#home">About</a>
-      <a href="#news">News</a>
-      <a href="#contact">Contact</a>
-      <a href="#about">Home</a>
+      <div>
+        <span>
+          <Link to="/">Home</Link>
+        </span>
+        <span>
+          <Link to="/contact">Contact</Link>
+        </span>
+      </div>
     </div>
-  );}
-    
-    
-
-
-
+  );
+};
