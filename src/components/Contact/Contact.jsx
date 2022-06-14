@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import "./Contact.css";
 
 export const UserForm = () => {
   const [data, setData] = useState({
@@ -41,14 +42,15 @@ export const UserForm = () => {
     console.log("sending data..." + data.name + " " + data.email);
     saveResults(data);
     clearState();
-    setMessage("form completed sucessfuly")
+    setMessage("form completed sucessfuly");
     setTimeout(() => {
       navigate("/");
     }, 3000);
   };
 
   return (
-    <form onSubmit={handleSubmit}>
+    <form className="form" onSubmit={handleSubmit}>
+      <h1>Contact form</h1>
       <input
         type="text"
         placeholder="name"
@@ -72,7 +74,9 @@ export const UserForm = () => {
         name="message"
       />
 
-      <button type="submit" disabled={btnDisabled}>Submit</button>
+      <button type="submit" disabled={btnDisabled}>
+        Submit
+      </button>
       {message}
     </form>
   );
@@ -81,18 +85,23 @@ export default UserForm;
 
 function getSavedData() {
   const usersDb = localStorage.getItem("results"); //traemos la informacion del local storage a un var
-  const dataArray = JSON.parse(usersDb) || []; //creating var to store. necessary step to translate to js
+  console.log(usersDb);
+  const dataArray = JSON.parse(usersDb) || [];
+ // const  Object.entries(dataObject); //creating var to store. necessary step to translate to js
+  console.log(dataArray);
   return dataArray;
 }
-
+getSavedData();
 function saveResults(data) {
-  const database = localStorage.setItem("user",JSON.stringify({
+  const database = {
     name: data.name,
     email: data.email,
-    message: data.message
-  })); //the result of a function saved in a variable
+    message: data.message,
+  }; //the result of a function saved in a variable
 
- // database.push(database); //pushing infoOfUsers to database array
-  localStorage.setItem("results", JSON.stringify(database)); // puts data back into local storage
+  const lc = getSavedData()
+  const ls = lc.push(database);
+  console.log("this is lc ",lc);
+  localStorage.setItem("results", JSON.stringify(lc)); //pushing infoOfUsers to database array
+  //localStorage.setItem("results", JSON.stringify(database)); // puts data back into local storage
 }
-

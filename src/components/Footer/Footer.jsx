@@ -1,19 +1,20 @@
 import React from 'react'
 import './Footer.css';
-export const Footer = ({objeto}) => {
-    const tecnologia = objeto.tecnologias.map(elemento => {
-        return (
-            <div key = {elemento.id}>               
-            <img className = 'logo' src={elemento.img} alt={elemento.name} />
-            </div>
-            )
-    })
-    return (          
-        <div className = 'tecnologia'>{tecnologia}
-        <p className = 'title'>Technologies learnt:</p>
-        </div>        
-      )
-}
+export const Footer = ({ objecto2 }) => {
+ 
+  const tecnologia = objecto2.map(elemento => {
+      return (
+          <div key = {elemento.id}>
+          <img className = 'logo' src={elemento.img} alt={elemento.name} />
+          </div>
+          )
+  })
+  return (
+    <div className = 'tecnologia'>{tecnologia}
+    <p className="title">Technologies learnt:</p>
+    </div>
+  );
+};
 //   return (
         
 //         // <img
