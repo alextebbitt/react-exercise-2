@@ -51,7 +51,7 @@ export const UserForm = () => {
   return (
     <form className="form" onSubmit={handleSubmit}>
       <h1>Contact form</h1>
-      <input
+      <input className="name"
         type="text"
         placeholder="name"
         value={data.name}
@@ -59,14 +59,14 @@ export const UserForm = () => {
         name="name"
       />
 
-      <input
+      <input className="email"
         type="email"
         placeholder="email"
         value={data.email}
         onChange={handleInputChange}
         name="email"
       />
-      <input
+      <input className="message"
         type="textarea"
         placeholder="write something here"
         value={data.message}
@@ -74,7 +74,7 @@ export const UserForm = () => {
         name="message"
       />
 
-      <button type="submit" disabled={btnDisabled}>
+      <button className="button" type="submit" disabled={btnDisabled}>
         Submit
       </button>
       {message}
@@ -85,10 +85,8 @@ export default UserForm;
 
 function getSavedData() {
   const usersDb = localStorage.getItem("results"); //traemos la informacion del local storage a un var
-  console.log(usersDb);
   const dataArray = JSON.parse(usersDb) || [];
  // const  Object.entries(dataObject); //creating var to store. necessary step to translate to js
-  console.log(dataArray);
   return dataArray;
 }
 getSavedData();

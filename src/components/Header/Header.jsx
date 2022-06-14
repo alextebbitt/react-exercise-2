@@ -6,6 +6,9 @@ import { Link } from "react-router-dom";
 export const Header = () => {
   return (
     <div class="topnav">
+      <div className="alex">
+        <h2> Alex Tebbitt </h2>
+      </div>
       <div>
         <span>
           <Link to="/">Home</Link>
