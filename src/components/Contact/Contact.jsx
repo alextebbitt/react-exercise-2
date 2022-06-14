@@ -50,7 +50,7 @@ export const UserForm = () => {
 
   return (
     <form className="form" onSubmit={handleSubmit}>
-      <h1>Contact form</h1>
+      <h1 className="contact">Contact form</h1>
       <input className="name"
         type="text"
         placeholder="name"
